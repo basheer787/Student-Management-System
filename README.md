@@ -1,6 +1,6 @@
-students = []
+    students = []
 
-def add_student(roll, name, course, cgpa):
+    def add_student(roll, name, course, cgpa):
     student = {
         'roll': roll,
         'name': name,
@@ -10,7 +10,7 @@ def add_student(roll, name, course, cgpa):
     students.append(student)
     print("Student added successfully!")
 
-def display_students():
+    def display_students():
     if not students:
         print("No students available.\n")
         return
@@ -21,7 +21,7 @@ def display_students():
         print(f"CGPA: {s['cgpa']}")
         print("------------------------")
 
-def search_student(roll):
+    def search_student(roll):
     for s in students:
         if s['roll'] == roll:
             print("Student Found:")
@@ -29,9 +29,9 @@ def search_student(roll):
             print(f"Course: {s['course']}")
             print(f"CGPA: {s['cgpa']}\n")
             return
-    print("Student not found.\n")
+        print("Student not found.\n")
 
-def cgpa(roll, new_cgpa):
+    def cgpa(roll, new_cgpa):
     for s in students:
         if s['roll'] == roll:
             s['cgpa'] = new_cgpa
@@ -39,7 +39,7 @@ def cgpa(roll, new_cgpa):
             return
     print("Student not found.\n")
 
-def delete_student(roll):
+    def delete_student(roll):
     for s in students:
         if s['roll'] == roll:
             students.remove(s)
@@ -47,7 +47,7 @@ def delete_student(roll):
             return
     print("Student not found.\n")
 
-def menu():
+    def menu():
     while True:
         print("\n*** Student Management System ***")
         print("1. Add Student")
